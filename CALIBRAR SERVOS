@@ -1,0 +1,33 @@
+#include <Servo.h>
+long angulo=30;
+Servo miservo;
+String aviso="CALIBRAR SERVOS  | Proyecto realizado por J.R alias @FenixBinario";
+String mensaje="nueva posicion cambiada a ";
+String config1="Calcula donde esta la IZQ, la DERCH y el CENTRO de el angulo de el servo: Introduce un numero entre 0 y 180 en la consola";
+String config2="RECUERDA: [CONEXIONES SERVO a ARDUINO]  ROJO:  alimentacion +5v  |  MARRON:  GND tierra  |  NARANJA:  pin3 de arduino";
+String grados=" grados";
+
+void setup(){
+    Serial.begin(9600);
+    miservo.attach (3);
+    Serial.println(aviso);
+    Serial.println(config1);
+    Serial.println(config2);    
+}
+
+void loop(){
+    if (Serial.available()>0){
+    angulo=Serial.parseInt();
+    if (angulo > -1 && angulo < 181){
+      miservo.write(angulo);
+      delay (15);
+      Serial.println((mensaje)+(angulo)+(grados));
+    }
+  }
+}
+/* CALIBRAR SERVOS
+Dibujo de las conexiones en www.moviola.xyz |Proyecto realizado por J.R alías @FenixBinario
+1)Utiliza este código para calibrar los servos en la posición correcta por el puerto serial: Atajo teclado (Ctrl+Shift+m)
+2)Calcula donde esta la IZQ, la DERCH y el CENTRO de el ángulo de el servo: Introduce un número entre 1 y 179 en la consola
+3)[CONEXIONES SERVO a ARDUINO]  ROJO:  alimentación +5v  |  MARRÓN:  GND tierra  |  NARANJA:  pin3 de arduino
+*/
