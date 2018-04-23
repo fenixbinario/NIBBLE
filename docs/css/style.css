@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  color: #000000;
+}
+
+body {
+  background-image: url("https://assets5.domestika.org/project-items/002/004/925/nibble-big.jpg?1499342208");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+#wrapper {
+  position: absolute;
+  top: 50%;
+  margin-top: -240px;
+  left: 0;
+  width: 100%;
+}
+
+#container {
+  width: 840px;
+  height: 480px;
+  margin: 0 auto;
+  box-shadow: 2px 2px 10px 6px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(189, 195, 199, 0.5);
+}
+#container nav {
+  width: 100%;
+  height: auto;
+}
+#container nav #logo {
+  float: left;
+  width: 10%;
+  margin: 5px 0 0 25px;
+}
+#container nav ul {
+  float: right;
+  width: 40%;
+  padding: 10px 10px 0 0;
+}
+#container nav ul li {
+  font-family: "rift", sans-serif;
+  font-weight: 500;
+  float: left;
+  margin: 25px;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+#container nav ul li:hover {
+  color: #fff;
+}
+#container #product {
+  width: 50%;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+}
+#container #text-wrap {
+  width: 40%;
+  height: auto;
+  position: absolute;
+  top: 130px;
+  right: 50px;
+  text-align: center;
+}
+#container #text-wrap p {
+  font-family: "proxima-nova", sans-serif;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+#container #text-wrap h2 {
+  font-family: "rift", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 2.5em;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#container #text-wrap button {
+  background: #000000;
+  padding: 20px;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+  font-family: "proxima-nova", sans-serif;
+  letter-spacing: 2px;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #DADFE1;
+}
+#container #text-wrap button:hover {
+  background: #1E824C;
+}
